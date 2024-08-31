@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      background-color: black;
+    }
+    div{
+      text-align: center;      
+    }
+
+    .container{
+       
+      padding:30px;
+      margin:150px auto;
+    }
+
+    #inc-btn{
+      background-color: green;
+      padding:10px;
+      
+    }
+
+    #dec-btn{
+      background-color: red;
+      padding:10px;
+    }
+
+    #count{
+      background-color: white;
+      font-size: 30px;
+      border-radius: 10px;
+      margin: 0px 20px;
+      padding:10px
+      
+    }
+     
+    h1{
+      color: white;
+    }
+
+ 
+  </style>
+</head>
+<body>
+ 
+
+  <div class = "container">
+    <h1>Increment and Decrement</h1>
+    <button id ="inc-btn">increment</button>
+    <span id = "count">count</span>
+    <button id = "dec-btn">decrement</button>
+  </div>
+  
+  <script>
+    incbtn = document.getElementById("inc-btn");
+    decbtn = document.getElementById("dec-btn");
+    spanTag = document.getElementById("count");
+
+    let count = 0;
+    spanTag.textContent = count;
+
+
+    function increment(){
+      
+       count++
+       spanTag.textContent=count;
+    
+    }
+
+    function decrement(){
+      if(count>0){
+        count--
+        spanTag.textContent=count;
+      }
+      else {
+        spanTag.textContent = 0
+      }
+    }
+
+    incbtn.addEventListener('click',increment);
+    decbtn.addEventListener('click',decrement);
+
+    
+  </script>
+</body>
+</html>

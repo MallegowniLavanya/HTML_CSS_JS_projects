@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login Form</title>
+  <style>
+    h1{
+      text-decoration: underline;
+    }
+    
+    fieldset{
+      margin-top: 20px;
+      padding:20px;
+
+    }
+    legend{
+      background-image: linear-gradient(20deg,blue,red); 
+      padding: 8px;
+      border-radius: 0px 20px;
+    }
+    h1{
+      text-align: center;
+    }
+    
+    body{
+      background-image: url(../all_images/wood.jpeg);
+      font-size: large;
+      font-style: bold;
+      font-weight: 500;
+    }
+
+     
+     
+  </style>
+</head>
+<body>
+  <h1>ONLINE JOB APPLICATION FORM</h1>
+  <fieldset>
+    <legend>Personal Information</legend>
+    <div class = "container">
+      
+        <table>
+          <tr>  
+         <td><label for="">First Name</label><input type="text"></td>
+         <td><label for="">Middle Name</label><input type="text"></td>
+         <td><label for="">Last Name</label><input type="text"></td>
+ 
+ 
+      </tr>
+
+      <tr> 
+         <td><label for="">Father Name</label><input type="text"></td>
+         <td><label for="">Mother Name</label><input type="text"></td>
+      </tr>
+
+      <tr> 
+         <td><label for="">Current Address</label><textarea rows = "2px" cols = "15px"></textarea></td>
+          
+         <td><label for="">Permanent Address</label><textarea rows = "2px" cols = "15px"></textarea></td>
+      </tr>
+      <td>Phone Numbers</td>
+      <tr>
+         
+        <td><label for="">Landline Number</label><input type="text"></td>
+        <td><label for="">Mobile Number</label><input type="text"><br></td>
+         
+      </tr>
+
+      <tr>
+        <td><label for="">Date Of Birth </label><input type="date"></td>
+        <td><label for="">place Of Birth</label><input type="text"></td>
+      </tr>
+         
+      </table>
+         
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Personal details</legend>
+    <table>
+      <tr>
+        <td>First Name <input type="text"></td>
+        <td>middle Name <input type="text"></td>
+        <td>last Name <input type="text"></td>
+       
+      </tr>
+
+      <tr>
+        <td>fathers name <input type="text"></td>
+        <td>mothers name <input type="text"></td>
+      </tr>
+
+      <tr>
+        <td>current address <input type="textarea"></td>
+        <td>permanent address <input type="text"></td>
+      </tr>
+
+      <tr>
+        <td>date of birth <input type="date"></td>
+      <td>place of birth <input type="text"></td>
+    </tr>
+
+     
+    <tr>
+      <td>select gender</td>
+      <td>male<input type="radio"></td>
+      <td>female <input type="radio"></td>
+    </tr>
+
+    <tr>
+      <td>highest qualification</td>
+      <td>year of passing <input type="date"></td>
+    </tr>
+
+     
+    <tr>
+      <td>languages known</td>
+      <td>telugu <input type="checkbox"></td>
+      <td>Hindi <input type="checkbox"></td>
+      <td>English <input type="checkbox"></td>
+    </tr>
+
+
+
+    </table>
+  </fieldset>
+
+  <fieldset>
+     <legend>educational details</legend>
+     
+      <table border = "2px">
+        <thead>
+          <tr>
+            <td>sno</td>
+            <td>qualification</td>
+            <td>institute/university</td>
+            <td>year of passing</td>
+            <td>marks </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="date"></td>
+            <td><input type="text"></td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="date"></td>
+            <td><input type="text"></td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="date"></td>
+            <td><input type="text"></td>
+          </tr>
+        </tbody>
+      </table>
+
+   
+  </fieldset>
+
+  <fieldset>
+    <legend>Work experience</legend>
+    <table>
+      <thead>
+        <tr>
+          <td>sno</td>
+          <td>company</td>
+          <td>work/roles</td>
+          <td>from date</td>
+          <td>to date</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><textarea cols = "20px" rows = "3px" id=""></textarea></td>
+          <td><textarea cols = "20px" rows = "3px" id=""></textarea></td>
+          <td><input type="date"></td>
+          <td><input type="text"></td>
+           
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td><textarea cols = "20px" rows = "3px" id=""></textarea></td>
+          <td><textarea cols = "20px" rows = "3px" id=""></textarea></td>
+          <td><input type="date"></td>
+          <td><input type="text"></td>
+           
+        </tr>
+
+        <tr>
+          <td>3</td>
+          <td><textarea cols = "20px" rows = "3px" id=""></textarea></td>
+          <td><textarea cols = "20px" rows = "3px" id=""></textarea></td>
+          <td><input type="date"></td>
+          <td><input type="text"></td>
+           
+           
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+
+  <fieldset>
+    <legend>other details</legend>
+    <table class = "other"> 
+    <tr>
+      <td>job type</td>
+      <td><input type="radio">permanent</td>
+      <td><input type="radio">contact</td>
+      <td><input type="radio">other</td>
+    </tr>
+
+    <tr>
+      <td>date of joining</td>
+      <td><input type="date"></td>
+      <td>time of joining <input type="date"></td>
+      
+    </tr>
+
+    <tr>
+      <td>preferred job location</td>
+      <td><input type="radio"> Hyderabad</td>
+      <td><input type="radio">Bangalore</td>
+      <td><input type="radio">others</td>
+    </tr>
+
+    <tr>
+      <td>willing to relocate or not?</td>
+      <td><input type="radio">yes</td>
+      <td><input type="radio">no</td>
+    </tr>
+    
+    <tr>
+      <td><input type="checkbox">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, praesentium rem deserunt modi beatae repudiandae quasi id itaque soluta commodi alias nostrum! Error sapiente nulla corporis voluptas cupiditate assumenda enim?</td>
+    </tr>
+
+    <tr>
+      <td><button>submit</button></td>
+      <td><button>reset</button></td>
+    </tr>
+  </table>
+  </fieldset>
+  
+</body>
+</html>
