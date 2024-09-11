@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../html_and_css/FA/fa/css/all.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+  <title>ToDo List App</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class = "container-fluid">
+      <a href="#" class = "navbar-brand"><i class="bi bi-flower3"></i>Amazon</a>
+      <a href="#" class="navbar-brand"><i class="bi bi-snow"></i>Amazon</a>
+    </div>
+    
+  </nav>
+ 
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-6 mt-4 m-auto">
+        <div class="card">
+           <div class="card-header bg-dark text-white text-center">
+                <h1>ToDo List App</h1>
+           </div>
+           <div class="card-body">
+            <form id="task-form">
+              <div class ="form-group mb-2"> 
+                 <input type="text" placeholder="Enter Task" class="form-control" id="task-el">
+              </div>
+              <div class ="form-group mb-2"> 
+              <input type="submit" value = "Add Task" class = "btn btn-dark">
+            </div>
+            </form>
+           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Displaying Tasks -->
+
+  <section class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-6 m-auto bg-secondary">
+        <ul class="list-group" id="task-list">
+          <li>enter the tasks which tou want</li>
+
+        </ul>
+
+      </div>
+    </div>
+
+              
+  </section>
+  
+
+  <script>
+let taskInputE1 = document.querySelector('#task-el'); // Correct selector
+
+    let taskFormE1 = document.querySelector('#task-form');
+    // let taskInputE1 = document.querySelector('#task-e1');
+
+    let taskList = localStorage.getItem('tasks')?JSON.parse(localStorage.getItem('tasks')):[];
+
+    taskFormE1.addEventListener('submit',function(e)
+  {
+    e.preventDefault();
+    let task = taskInputE1.value.trim();
+    taskList.unshift(task);
+    localStorage.setItem('tasks',JSON.stringify(taskList));
+    taskInputE1.value='';
+    displayTasks();
+
+  })
+
+  // displaying tasks
+
+  function displayTasks()
+  {
+    let eachTask ='';
+    taskList.forEach((task)=>
+  {
+    eachTask+=`<li class = "list-group-item list-group-item-secondary mb-2">
+      <span>${task}</span>
+      <button class = "float-end icon">
+        <i class ="bi bi-trash"></i>
+      </button>
+
+      <button class = "float-end mb-2 icon">
+        <i class = "bi bi-pen"></i>
+      </button>
+
+    </li>
+    `
+  });
+  document.getElementById('task-list').innerHTML = eachTask;
+
+  }
+  displayTasks();
+
+  </script>
+
+  
+</body>
+</html>
